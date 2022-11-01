@@ -5,16 +5,20 @@ import PageBase from '../../components/PageBase/PageBase';
 import settings from '../../settings';
 import classes from './Index.styles.less';
 
+  
+
 export default function Index() {
-  useDocumentTitle('Omatsuri');
+  useDocumentTitle('DIY Tools');
 
   const tools = settings.tools.map((tool) => (
     <ToolCard className={classes.tool} key={tool.name} {...tool} />
   ));
 
   return (
-    <PageBase>
-      <div className={classes.tools}>{tools}</div>
-    </PageBase>
+    <>
+      <PageBase>
+        <div className={classes.tools}>{tools}</div>
+      </PageBase>
+    </>
   );
 }

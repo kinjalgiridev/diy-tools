@@ -4,7 +4,7 @@ export default function Credits() {
   return (
     <div>
       <h2>Credits</h2>
-      <p>Omatsuri was made possible by these awesome projects and resources:</p>
+      <p>DIY Tools was made possible by these awesome projects and resources:</p>
       <ul>
         <li>
           <a

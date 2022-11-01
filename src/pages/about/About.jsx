@@ -17,8 +17,8 @@ export default function About() {
     <PageBase>
       <div className={cx(classes.about, classes[theme])}>
         <Application />
-        <Contributors />
-        <Credits />
+        {/* <Contributors />
+        <Credits /> */}
       </div>
     </PageBase>
   );
