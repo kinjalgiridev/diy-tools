@@ -1,8 +1,8 @@
-# Omatsuri app
+# DIY Tools app
 
 ![Logo](./src/assets/logo-text.svg)
 
-Omatsuri is a progressive web application with 12 open source frontend focused tools. Omatsuri translates to «festival» from Japanese (お祭り) and here we have a small festival of applications. It was built with strong respect to your privacy – you will never see ads and it does not include analytics services (or actually any services at all). You are highly encouraged to explore source code and use it in your projects.
+DIY Tools is a progressive web application with 14 open source frontend focused tools.You are highly encouraged to explore source code and use it in your projects.
 
 ## Quick links
 
@@ -26,7 +26,9 @@ Omatsuri is a progressive web application with 12 open source frontend focused t
 - SVG compressor
 - SVG to JSX converter
 - Base64 encoder
+- Base64 decoder
 - Realistic Fake Data Generator
+- Password Generator
 - HTML/CSS Symbols Collection
 - Lorem/Samuel/Poke Ipsum Generator
 - CSS Cursor Properties
