@@ -30,11 +30,11 @@ const templateContent = ({ htmlWebpackPlugin }) => `
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="Progressive Web Application with 12 open source frontend focused tools">
       <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-      <title>Omatsuri</title>
+      <title>DIY Tools</title>
     </head>
     <body>
       <noscript>
-        Enable JavaScript to use Omatsuri
+        Enable JavaScript to use DIY Tools
       </noscript>
 
       <div id="app"></div>

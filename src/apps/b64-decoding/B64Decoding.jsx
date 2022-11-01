@@ -9,6 +9,7 @@ import Dropzone from '../../components/Dropzone/Dropzone';
 import B64Worker from '../../workers/b64-decode.worker';
 import classes from './B64Decoding.styles.less';
 import Base64Input from '../../components/Base64Input/Base64Input';
+import Button from '../../components/Button/Button';
 
 const b64 = new B64Worker();
 
@@ -74,6 +75,13 @@ export default function B64Encoding() {
     setValue({ loading: false, error: null, content: ''});
     setResult({ loading: false, content: '', error: null });
   }
+  const downloadBase64File=(base64Data, fileName)=>{
+    const linkSource = base64Data;
+    const downloadLink = document.createElement("a");
+    downloadLink.href = linkSource;
+    downloadLink.download = fileName;
+    downloadLink.click();
+}
   return (
     <>
       <Base64Input
@@ -89,8 +97,7 @@ export default function B64Encoding() {
       {result.content && (
         <Background className={classes.wrapper}>
           <div className={classes.section}>
-            <SettingsLabel>Raw base64</SettingsLabel>
-            <Highlight>{result.content}</Highlight>
+            {result.content.substring(0,4)==="data"?<><Button style={{float: "right" , margin: "10px 0px"}} onClick={()=>downloadBase64File(result.content,"untitled")}>Download</Button><img style={{ width:1000, borderRadius:20, borderWidth: 1, borderColor: 'red' }} src={result.content} /></>:<><SettingsLabel>Raw base64 </SettingsLabel><Highlight>{result.content}</Highlight></>}
           </div>
         </Background>
       )}
