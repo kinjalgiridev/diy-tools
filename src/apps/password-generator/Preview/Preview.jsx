@@ -8,7 +8,7 @@ import classes from './Preview.styles.less';
 export default function Preview({ text }) {
   const [theme] = useTheme();
 
-  return <Background className={cx(classes.wrapper, classes[theme])}><h2 style={{textAlign:'center'}}>{text}</h2></Background>;
+  return <Background className={cx(classes.wrapper, classes[theme])}><h2 className={cx(classes.label, classes[theme])} style={{textAlign:'center'}}>{text}</h2></Background>;
 }
 
 Preview.propTypes = {

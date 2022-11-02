@@ -4747,6 +4747,11 @@ file-loader@^6.1.0:
     loader-utils "^2.0.0"
     schema-utils "^2.7.1"
 
+file-saver@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.npmjs.org/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
+
 file-type@^3.1.0, file-type@^3.8.0:
   version "3.9.0"
   resolved "https://registry.npmjs.org/file-type/-/file-type-3.9.0.tgz"
@@ -9096,6 +9101,11 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-peeps@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.npmjs.org/react-peeps/-/react-peeps-0.1.10.tgz#56c62a6dcaff634abfc5ddd622f35287057aaddb"
+  integrity sha512-DXn1rRIeEWeMN99y2//6y9PhzIHqmklO0Y7LpPt6jpTL6pVfREcTGxBol9+7oZCgZmVI/t4ra3hR0KrU7PKsnQ==
 
 react-router-dom@^5.2.0:
   version "5.2.0"

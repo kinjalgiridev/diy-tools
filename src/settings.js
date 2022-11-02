@@ -34,6 +34,12 @@ module.exports = {
     },
 
     {
+      link: '/avatar-generator',
+      name: 'Avatar generator',
+      description: 'Generate avatar and modify with lots of properties',
+    },
+
+    {
       link: '/page-dividers',
       name: 'Page dividers',
       description: 'Tool to generate page dividers with css and svg images',

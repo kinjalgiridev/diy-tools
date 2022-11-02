@@ -23,6 +23,7 @@ import CssCursors from './apps/css-cursors/CssCursors';
 import EventsKeycode from './apps/events-keycode/EventsKeycode';
 import GradientGenerator from './apps/gradient-generator/GradientGenerator';
 import PasswordGenerator from './apps/password-generator/PasswordGenerator';
+import AvatarGenerator from './apps/avatar-generator/AvatarGenerator';
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
                 <Route path="/events-keycode" exact component={EventsKeycode} />
                 <Route path="/gradient-generator" exact component={GradientGenerator} />
                 <Route path="/password-generator" exact component={PasswordGenerator} />
+                <Route path="/avatar-generator" exact component={AvatarGenerator} />
                 <Route component={NotFound} />
               </Switch>
             </AppContainer>

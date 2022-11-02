@@ -26,4 +26,5 @@ export default {
   '/events-keycode': eventsKeycode,
   '/gradient-generator': gradientGenerator,
   '/password-generator': fakeDataGenerator,
+  '/avatar-generator': fakeDataGenerator,
 };

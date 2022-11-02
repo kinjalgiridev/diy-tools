@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SliderInput from '../../../components/SliderInput/SliderInput';
 import Button from '../../../components/Button/Button';
-import Tabs from '../../../components/Tabs/Tabs';
 import Background from '../../../components/Background/Background';
 import classes from './Settings.styles.less';
 
@@ -16,7 +15,7 @@ export default function Settings({
 }) {
   return (
     <Background className={classes.wrapper}>
-      <h3>Password Generator</h3>
+      <h3 className={classes.label}>Password Generator</h3>
       <div className={classes.footer}>
         <div className={classes.length}>
           <div className={classes.label}>Password Length</div>
