@@ -2,7 +2,7 @@
 
 ![Logo](./src/assets/logo-text.svg)
 
-DIY Tools is a progressive web application with 14 open source frontend focused tools.You are highly encouraged to explore source code and use it in your projects.
+DIY Tools is a progressive web application with 15 open source frontend focused tools.You are highly encouraged to explore source code and use it in your projects.
 
 ## Quick links
 
@@ -22,6 +22,7 @@ DIY Tools is a progressive web application with 14 open source frontend focused 
 - CSS Triangle Generator
 - Color Shades Generator
 - Gradient Generator
+- Avatar Generator
 - Page Dividers Generator
 - SVG compressor
 - SVG to JSX converter

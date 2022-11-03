@@ -39,6 +39,7 @@ export default function ColorShadesList({
   const clipboardAll = useClipboard();
   const clipboard = useClipboard({ timeout: 500 });
   const values = generateShades({ steps: 7, value, saturation, darken });
+  console.log(JSON.stringify(values, null, 2));
   const copyAll = () => clipboardAll.copy(JSON.stringify(values, null, 2));
 
   const items = values.map((shade, index) => (
