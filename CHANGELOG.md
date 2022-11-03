@@ -1,13 +1,13 @@
-# Omatsuri changelog
+# DIY Tools changelog
 
-Omatsuri is a growing set of browser tools. Each month I try to add one new tool and improve UX and performance of existing ones.
+DIY Tools is a growing set of browser tools. Each month I try to add one new tool and improve UX and performance of existing ones.
 
 ## v1.2.0 – Current release
 
 **New features and tools:**
 
 - New tool: **Gradient generator** allows you to generate linear and radial gradients and comes with gradients gallery
-- Full offline support with [offline-plugin](https://github.com/NekR/offline-plugin) – Omatsuri can now be installed as PWA and work fully offline
+- Full offline support with [offline-plugin](https://github.com/NekR/offline-plugin) – DIY Tools can now be installed as PWA and work fully offline
 - Dark theme support
 
 **Improvements of existing applications:**

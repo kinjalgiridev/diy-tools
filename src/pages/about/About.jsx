@@ -9,7 +9,7 @@ import Contributors from './Contributors/Contributors';
 import classes from './About.styles.less';
 
 export default function About() {
-  useDocumentTitle('About Omatsuri');
+  useDocumentTitle('About DIY Tools');
 
   const [theme] = useTheme();
 

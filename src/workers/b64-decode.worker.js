@@ -2,10 +2,10 @@ import optimize from 'svgo-browser/lib/optimize';
 import processSvgFile from '../utils/process-svg-file';
 
 onmessage = (event) => {
-  console.log(event);
   const { file, content } = event.data;
   if (content) {
-    postMessage(atob(content));  
+    console.log(content.substring(0,4));
+    content.substring(0,4)==="data"?postMessage(content):postMessage(atob(content));  
   } else if (file) {
     if (file.type === 'image/svg+xml') {
       processSvgFile(file)
