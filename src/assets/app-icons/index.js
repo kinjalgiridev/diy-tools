@@ -18,6 +18,7 @@ export default {
   '/svg-compressor': svgCompressor,
   '/svg-to-jsx': svg2jsx,
   '/html-symbols': htmlSymbols,
+  '/icon-collection': htmlSymbols,
   '/lorem-ipsum': loremIpsum,
   '/b64-encoding': b64encoding,
   '/b64-decoding': b64encoding,

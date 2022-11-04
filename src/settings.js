@@ -93,6 +93,13 @@ module.exports = {
     },
 
     {
+      link: '/icon-collection',
+      name: 'Icon collection',
+      description:
+        'Collection of commonly used icons',
+    },
+
+    {
       link: '/lorem-ipsum',
       name: 'Lorem ipsum',
       description: 'Generate different kinds of lorem ipsum text',
