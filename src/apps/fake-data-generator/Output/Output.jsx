@@ -27,7 +27,16 @@ export default function Output({ type, fields, amount, seed = null }) {
 
     return <Background className={cx(classes.wrapper, classes[theme])}>{items}</Background>;
   }
+  if (type === 'login') {
+    const items = rawData.filter(person => person.key === 'Password' || person.key === 'Username').map((item) => (
+      <div key={item.key} className={classes.rawItem}>
+        <div className={classes.key}>{item.key}</div>
+        <div className={classes.value}>{item.data}</div>
+      </div>
+    ));
 
+    return <Background className={cx(classes.wrapper, classes[theme])}>{items}</Background>;
+  }
   return (
     <Background className={cx(classes.wrapper, classes[theme])}>
       <Highlight>{JSON.stringify(jsonData, null, 2)}</Highlight>
