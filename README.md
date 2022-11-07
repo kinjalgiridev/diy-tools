@@ -2,7 +2,7 @@
 
 ![Logo](./src/assets/logo-text.svg)
 
-DIY Tools is a progressive web application with 15 open source frontend focused tools.You are highly encouraged to explore source code and use it in your projects.
+DIY Tools is a progressive web application with 16 open source frontend focused tools.You are highly encouraged to explore source code and use it in your projects.
 
 ## Quick links
 
@@ -31,6 +31,7 @@ DIY Tools is a progressive web application with 15 open source frontend focused 
 - Realistic Fake Data Generator
 - Password Generator
 - HTML/CSS Symbols Collection
+- Icon Collection
 - Lorem/Samuel/Poke Ipsum Generator
 - CSS Cursor Properties
 - JavaScript Events Keycodes
