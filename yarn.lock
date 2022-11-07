@@ -4747,6 +4747,11 @@ file-loader@^6.1.0:
     loader-utils "^2.0.0"
     schema-utils "^2.7.1"
 
+file-saver@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.npmjs.org/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
+
 file-type@^3.1.0, file-type@^3.8.0:
   version "3.9.0"
   resolved "https://registry.npmjs.org/file-type/-/file-type-3.9.0.tgz"
@@ -9087,6 +9092,11 @@ react-hot-loader@^4.12.21:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
+react-icons@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.npmjs.org/react-icons/-/react-icons-4.6.0.tgz#f83eda179af5d02c047449a20b702c858653d397"
+  integrity sha512-rR/L9m9340yO8yv1QT1QurxWQvWpbNHqVX0fzMln2HEb9TEIrQRGsqiNFQfiv9/JEUbyHmHPlNTB2LWm2Ttz0g==
+
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -9096,6 +9106,11 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-peeps@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.npmjs.org/react-peeps/-/react-peeps-0.1.10.tgz#56c62a6dcaff634abfc5ddd622f35287057aaddb"
+  integrity sha512-DXn1rRIeEWeMN99y2//6y9PhzIHqmklO0Y7LpPt6jpTL6pVfREcTGxBol9+7oZCgZmVI/t4ra3hR0KrU7PKsnQ==
 
 react-router-dom@^5.2.0:
   version "5.2.0"
@@ -10396,6 +10411,11 @@ stylis@4.1.3:
   version "4.1.3"
   resolved "https://registry.npmjs.org/stylis/-/stylis-4.1.3.tgz#fd2fbe79f5fed17c55269e16ed8da14c84d069f7"
   integrity sha512-GP6WDNWf+o403jrEp9c5jibKavrtLW+/qYGhFxFrG8maXhwTBI7gLLhiBb0o7uFccWN+EOS9aMO6cGHWAO07OA==
+
+supercons@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/supercons/-/supercons-0.0.1.tgz#b016f843ec930e30889dff01bdd5086398bbb4bd"
+  integrity sha512-ET70X83boPmv8ze9r5CuGXJCBZ9mbQ32RgE1CIwOX4K2hv9yA9mu8mtkt52VKER1PDZFSf5v/+9neLD5d1bFCQ==
 
 supports-color@^5.3.0:
   version "5.5.0"

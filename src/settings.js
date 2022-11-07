@@ -34,6 +34,12 @@ module.exports = {
     },
 
     {
+      link: '/avatar-generator',
+      name: 'Avatar generator',
+      description: 'Generate avatar and modify with lots of properties',
+    },
+
+    {
       link: '/page-dividers',
       name: 'Page dividers',
       description: 'Tool to generate page dividers with css and svg images',
@@ -84,6 +90,13 @@ module.exports = {
       name: 'Symbols collection',
       description:
         'Collection of commonly used html symbols: arrows, marks, currency signs and many others',
+    },
+
+    {
+      link: '/icon-collection',
+      name: 'Icon collection',
+      description:
+        'Collection of commonly used icons',
     },
 
     {

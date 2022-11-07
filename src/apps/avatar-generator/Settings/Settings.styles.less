@@ -1,0 +1,70 @@
+.controls {
+  margin: 10px;
+  padding: 15px;
+}
+
+.preview {
+  margin: 10px;
+}
+
+.body {
+  display: flex;
+  margin-top: 30px;
+}
+.label {
+  color: @oc-gray-6;
+  margin-right: 15px; 
+}
+.labelprev
+{
+  color: @oc-gray-6;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.label h4 {
+  cursor:pointer;
+  margin-left: 15px;
+}
+.label svg {
+  cursor:pointer;
+}
+.active {
+  color: @oc-violet-9;
+  pointer-events: none;
+}
+.scroll
+{
+  height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  list-style: none;
+  padding:10px
+}
+.scroll li{
+  padding:10px 0px;
+  display: flex;
+  align-items: center;
+}
+.pd15
+{
+  padding:15px
+}
+.dark {
+  .control {
+    color: @oc-gray-3;
+  }
+  .labelprev
+  {
+    color: @oc-gray-5;
+  }
+  .active {
+    color: @oc-gray-2;
+  }
+}
+
+.column {
+  & + & {
+    margin-left: 30px;
+  }
+  
+}

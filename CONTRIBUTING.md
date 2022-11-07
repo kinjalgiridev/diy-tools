@@ -1,6 +1,6 @@
-# Contributing to Omatsuri
+# Contributing to DIY Tools
 
-Thanks for taking a look at the project and thinking about contributing! I'm always looking forward to add more applications to Omatsuri, improve UX of existing tools and decrease loading time. You are welcome to become contributor and create pull request with any improvements and new features.
+Thanks for taking a look at the project and thinking about contributing! I'm always looking forward to add more applications to DIY Tools, improve UX of existing tools and decrease loading time. You are welcome to become contributor and create pull request with any improvements and new features.
 
 ## Getting started
 

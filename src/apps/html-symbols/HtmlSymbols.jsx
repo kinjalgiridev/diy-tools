@@ -18,7 +18,7 @@ function searchSymbols(query, type) {
   if (query.trim().length === 0) {
     return symbols[type].data;
   }
-
+  console.log('a',symbols[type].fuse);
   return symbols[type].fuse.search(query).map(({ item }) => item);
 }
 
