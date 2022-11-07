@@ -8,6 +8,7 @@ import Tabs from '../../../components/Tabs/Tabs';
 import HexInput from '../../../components/HexInput/HexInput';
 import { useTheme } from '../../../ThemeProvider';
 import cx from 'classnames';
+import { BiShuffle } from "react-icons/bi";
 
 export default function Preview({
   previewHandlers,
@@ -97,7 +98,7 @@ export default function Preview({
               style={{ height: '35px', marginRight:'20px', display: 'flex', alignItems: 'center'}}
               onClick={getRandomAvatar}
             >
-              Shuffle
+              Shuffle <BiShuffle />
             </Button>
             <Button
               style={{ height: '35px', marginRight:'20px' }}

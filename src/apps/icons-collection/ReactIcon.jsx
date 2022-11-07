@@ -1,9 +1,9 @@
 import React from 'react';
-import * as FontAwesome from "react-icons/fa";
+import * as icons from 'react-icons/all'
 
-export default function ReactIcon({Type,ItemData}) {
-    const beer = React.createElement(FontAwesome[ItemData]);
+export default function ReactIcon({ItemData}) {
+    const icon = React.createElement(icons[ItemData]);
   return (
-    <div style={{ fontSize: 24 }}>{beer}</div>
+    <div style={{ fontSize: 30 }}>{icon}</div>
   );
 }
