@@ -15,6 +15,10 @@ import classes from './Settings.styles.less';
 const types = [
   { value: 'default', label: 'Raw data' },
   { value: 'login', label: 'Login Credentials' },
+  { value: 'profile', label: 'Profile' },
+  { value: 'company', label: 'Company' },
+  { value: 'address', label: 'Address' },
+  { value: 'date', label: 'Date' },
   { value: 'json', label: 'JSON Schema' },
 ];
 
