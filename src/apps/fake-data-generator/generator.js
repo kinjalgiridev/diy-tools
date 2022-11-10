@@ -11,6 +11,10 @@ const generators = {
   bitcoin_address: faker.finance.bitcoinAddress,
   company: faker.company.companyName,
   zip: faker.address.zipCode,
+  latitude: faker.address.latitude,
+  longitude: faker.address.longitude,
+  domain: faker.internet.domainName,
+  ip: faker.internet.ip,
   address: () =>
     faker.fake(
       '{{address.cityPrefix}} {{address.city}}, {{address.streetName}}, {{random.number}}'
@@ -30,6 +34,13 @@ export default function generate(type) {
   }
 
   return null;
+}
+
+export function generateLoginData() {
+  return Object.keys(generators).map((key) => ({
+    key: (key.charAt(0).toUpperCase() + key.slice(1)).replace('_', ' '),
+    data: generators[key](),
+  }));
 }
 
 export function generateRawData() {
