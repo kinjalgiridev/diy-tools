@@ -26,7 +26,6 @@ import PasswordGenerator from './apps/password-generator/PasswordGenerator';
 import AvatarGenerator from './apps/avatar-generator/AvatarGenerator';
 import IconCollection from './apps/icons-collection/IconCollection';
 import UrlEncoding from './apps/url-encoding/UrlEncoding';
-import UrlDecoding from './apps/url-encoding/UrlDecoding';
 
 function App() {
   return (
