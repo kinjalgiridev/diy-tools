@@ -25,6 +25,8 @@ import GradientGenerator from './apps/gradient-generator/GradientGenerator';
 import PasswordGenerator from './apps/password-generator/PasswordGenerator';
 import AvatarGenerator from './apps/avatar-generator/AvatarGenerator';
 import IconCollection from './apps/icons-collection/IconCollection';
+import UrlEncoding from './apps/url-encoding/UrlEncoding';
+import UrlDecoding from './apps/url-encoding/UrlDecoding';
 
 function App() {
   return (
@@ -52,6 +54,7 @@ function App() {
                 <Route path="/password-generator" exact component={PasswordGenerator} />
                 <Route path="/avatar-generator" exact component={AvatarGenerator} />
                 <Route path="/icon-collection" exact component={IconCollection} />
+                <Route path="/url-encoding" exact component={UrlEncoding} />
                 <Route component={NotFound} />
               </Switch>
             </AppContainer>

@@ -1,27 +1,36 @@
-import React, { useState, useLayoutEffect } from 'react';
-import cx from 'classnames';
+import React, { useLayoutEffect, useState } from 'react';
 import { useDocumentTitle, useLocalStorage } from 'xooks';
-import Highlight from '../../components/Highlight/Highlight';
 import Background from '../../components/Background/Background';
-import SettingsLabel from '../../components/SettingsLabel/SettingsLabel';
-import DropPlaceholder from '../../components/DropPlaceholder/DropPlaceholder';
-import Dropzone from '../../components/Dropzone/Dropzone';
-import B64Worker from '../../workers/b64.worker';
-import classes from './B64Encoding.styles.less';
 import Base64Input from '../../components/Base64Input/Base64Input';
+import classes from '../../components/Base64Input/Base64Input.styles.less';
+import Highlight from '../../components/Highlight/Highlight';
+import SettingsLabel from '../../components/SettingsLabel/SettingsLabel';
+import UrlWorker from '../../workers/url-decoding.worker';
+// export const UrlEncoding = () => {
+// function UrlEncoding() {
+//   const UrlText = (UrlValue) => {
+//       const encodedURL = encodeURIComponent(`${UrlValue}`);
+//       console.log('UrlValue', encodedURL);
+//       console.log('url', `https://www.google.com/search?q=${encodedURL}`);
+//   };
 
-const b64 = new B64Worker();
+//   return (
+//     <>
+//       <div> URL Encoding </div>
+//       <textarea name="url-encoding" id="" cols="60" rows="10" onChange={(e) => UrlText(e.target.value)} />
+//     </>
+//   );
+// }
+// export default UrlEncoding;
 
-function generateCssExample(content) {
-  return `.element {\n  background-image: url(${content});\n}`;
-}
+const Url = new UrlWorker();
 
-export default function B64Encoding() {
-  useDocumentTitle('Base64 encoding');
+export default function UrlDecoding() {
+  useDocumentTitle('Url decoding');
 
-  const ls = useLocalStorage({ key: '@omatsuri/b64-encoding', delay: 500 });
-  const lsVal = useLocalStorage({ key: '@omatsuri/b64-encoding-value', delay: 500 });
-  const transmittedValue = useLocalStorage({ key: '@omatsuri/conversion-after-compression/b64' });
+  const ls = useLocalStorage({ key: '@omatsuri/url-decoding', delay: 500 });
+  const lsVal = useLocalStorage({ key: '@omatsuri/url-decoding-value', delay: 500 });
+  const transmittedValue = useLocalStorage({ key: '@omatsuri/conversion-after-compression/Url' });
   const [value, setValue] = useState({ loading: false, error: null, content: lsVal.retrieve() || '' });
   const [result, setResult] = useState({ loading: false, error: null, content: ls.retrieve() || '' });
 
@@ -37,19 +46,15 @@ export default function B64Encoding() {
     });
   };
 
-  const postMessage = (file) => {
-    b64.postMessage({ file });
-  };
-
   useLayoutEffect(() => {
-    b64.addEventListener('message', handleMessage);
+    Url.addEventListener('message', handleMessage);
     const transmittedContent = transmittedValue.retrieveAndClean();
 
     if (transmittedContent) {
-      b64.postMessage({ content: transmittedContent });
+      Url.postMessage({ content: transmittedContent });
     }
 
-    return () => b64.removeEventListener('message', handleMessage);
+    return () => Url.removeEventListener('message', handleMessage);
   }, []);
 
   const handleChange = (text) => {
@@ -57,7 +62,7 @@ export default function B64Encoding() {
     lsVal.save(text);
     ls.save(text);
     setResult({ loading: true, content: null, error: null });
-    b64.postMessage({ content: text });
+    Url.postMessage({ content: text });
   };
 
   const handleFilesDrop = (files) => {
@@ -73,34 +78,26 @@ export default function B64Encoding() {
     setValue({ loading: false, error: null, content: '' });
     setResult({ loading: false, content: '', error: null });
   };
+
   return (
     <>
       <Base64Input
         value={value.content}
         onChange={handleChange}
         clearData={clearData}
-        title={"Raw base64"}
+        title="Decode Url"
         errors={result.error && value.trim().length > 0 ? ['input file'] : []}
         onFilesDrop={handleFilesDrop}
         accepts={undefined}
-        dropLabel="Drop an SVG file to the browser window to optimize it and convert it to JSX"
       />
       {result.content && (
         <Background className={classes.wrapper}>
           <div className={classes.section}>
-            <SettingsLabel>Raw base64</SettingsLabel>
+            <SettingsLabel>Raw encode</SettingsLabel>
             <Highlight>{result.content}</Highlight>
           </div>
         </Background>
       )}
-      {(value.content === '' && result.content) &&
-        <Background className={classes.wrapper}>
-          <div className={classes.section}>
-            <SettingsLabel>Use as CSS background</SettingsLabel>
-            <Highlight>{generateCssExample(result.content)}</Highlight>
-          </div>
-        </Background>
-      }
     </>
   );
 }

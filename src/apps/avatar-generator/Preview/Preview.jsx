@@ -65,7 +65,7 @@ export default function Preview({
       <div className="svgWrapper" style={styles.showcaseWrapper}>
         <Peep
            style={{ ...styles.peepStyle, transform: flip?'scale(-1, 1)':'' }}
-         // style={{ ...styles.peepStyle }}
+         // style={{ ...styles.peepStyle }
           accessory={accessory}
           body={body}
           face={face}

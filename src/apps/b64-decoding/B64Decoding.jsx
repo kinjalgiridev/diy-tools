@@ -1,7 +1,7 @@
 import React, { useState, useLayoutEffect } from 'react';
 import cx from 'classnames';
 import { useDocumentTitle, useLocalStorage } from 'xooks';
-import Highlight from '../../components/Highlight/Highlight'; 
+import Highlight from '../../components/Highlight/Highlight';
 import Background from '../../components/Background/Background';
 import SettingsLabel from '../../components/SettingsLabel/SettingsLabel';
 import DropPlaceholder from '../../components/DropPlaceholder/DropPlaceholder';
@@ -23,8 +23,8 @@ export default function B64Encoding() {
   const ls = useLocalStorage({ key: '@omatsuri/b64-decoding', delay: 500 });
   const lsVal = useLocalStorage({ key: '@omatsuri/b64-decoding-value', delay: 500 });
   const transmittedValue = useLocalStorage({ key: '@omatsuri/conversion-after-compression/b64-decode' });
-  const [value, setValue] = useState({ loading: false, error: null, content: lsVal.retrieve()|| '' });
-  const [result, setResult] = useState({ loading: false, error: null, content: ls.retrieve()|| '' });
+  const [value, setValue] = useState({ loading: false, error: null, content: lsVal.retrieve() || '' });
+  const [result, setResult] = useState({ loading: false, error: null, content: ls.retrieve() || '' });
 
   const handleMessage = (event) => {
     console.log(event.data);
@@ -70,25 +70,25 @@ export default function B64Encoding() {
   };
 
   const clearData = () => {
-   lsVal.clean();
-   ls.clean();
-    setValue({ loading: false, error: null, content: ''});
+    lsVal.clean();
+    ls.clean();
+    setValue({ loading: false, error: null, content: '' });
     setResult({ loading: false, content: '', error: null });
-  }
-  const downloadBase64File=(base64Data, fileName)=>{
+  };
+  const downloadBase64File = (base64Data, fileName) => {
     const linkSource = base64Data;
-    const downloadLink = document.createElement("a");
+    const downloadLink = document.createElement('a');
     downloadLink.href = linkSource;
     downloadLink.download = fileName;
     downloadLink.click();
-}
+  };
   return (
     <>
       <Base64Input
         value={value.content}
         onChange={handleChange}
         clearData={clearData}
-        title={"Decode from Base64"}
+        title="Decode from Base64"
         errors={result.error && value.trim().length > 0 ? ['input file'] : []}
         onFilesDrop={handleFilesDrop}
         accepts={undefined}
@@ -97,19 +97,19 @@ export default function B64Encoding() {
       {result.content && (
         <Background className={classes.wrapper}>
           <div className={classes.section}>
-            {result.content.substring(0,4)==="data"?<><Button style={{float: "right" , margin: "10px 0px"}} onClick={()=>downloadBase64File(result.content,"untitled")}>Download</Button><img style={{ width:1000, borderRadius:20, borderWidth: 1, borderColor: 'red' }} src={result.content} /></>:<><SettingsLabel>Raw base64 </SettingsLabel><Highlight>{result.content}</Highlight></>}
+            {result.content.substring(0, 4) === 'data' ? <><Button style={{ float: 'right', margin: '10px 0px' }} onClick={() => downloadBase64File(result.content, 'untitled')}>Download</Button><img style={{ width: 1000, borderRadius: 20, borderWidth: 1, borderColor: 'red' }} src={result.content} /></> : <><SettingsLabel>Raw base64 </SettingsLabel><Highlight>{result.content}</Highlight></>}
           </div>
         </Background>
       )}
 
-      {(value.content==='' && result.content) && 
+      {(value.content === '' && result.content) && (
         <Background className={classes.wrapper}>
-        <div className={classes.section}>
-          <SettingsLabel>Use as CSS background</SettingsLabel>
-          <Highlight>{generateCssExample(result.content)}</Highlight>
-        </div>
+          <div className={classes.section}>
+            <SettingsLabel>Use as CSS background</SettingsLabel>
+            <Highlight>{generateCssExample(result.content)}</Highlight>
+          </div>
         </Background>
-      }
+      )}
     </>
   );
 }

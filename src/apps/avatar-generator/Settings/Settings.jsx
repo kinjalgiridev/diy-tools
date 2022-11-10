@@ -19,13 +19,12 @@ import Background from '../../../components/Background/Background';
 
 export default function Settings({handlers, type, onTypeChange,accessory,body,face,hair,facialHair}) {
     const [theme] = useTheme();
-    
     const styles = {
         peepStyle: {
           width: 70,
           height: 70,
           justifyContent: 'center',
-          alignSelf: 'center'
+          alignSelf: 'center',
         },
         circleStyle: {
           backgroundColor: '#F3D34A',

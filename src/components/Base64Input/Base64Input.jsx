@@ -29,7 +29,7 @@ export default function Base64Input({
   return (
     <div className={classes[theme]}>
       <Dropzone accepts="*" onDrop={onFilesDrop} />
-      {title!=="Decode from Base64" && <DropPlaceholder onFileAdd={(file) => onFilesDrop([file])}> Drop a file to the browser window to convert it to base64 format</DropPlaceholder>}
+      {title !== 'Decode from Base64' && title !== 'Encode Url' && title !== 'Decode Url' && <DropPlaceholder onFileAdd={(file) => onFilesDrop([file])}> Drop a file to the browser window to convert it to base64 format</DropPlaceholder>}
       <Background className={classes.wrapper}>
         <div className={classes.header}>
           <SettingsLabel className={classes.title}>{title}</SettingsLabel>
@@ -54,5 +54,5 @@ Base64Input.propTypes = {
   onFilesDrop: PropTypes.func.isRequired,
   dropLabel: PropTypes.string.isRequired,
   formatFileName: PropTypes.func,
-  result: PropTypes.object
+  result: PropTypes.object,
 };
