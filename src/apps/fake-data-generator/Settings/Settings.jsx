@@ -38,7 +38,7 @@ export default function Settings({
   const schema = fields.map((field, index) => (
     <div className={classes.field} key={field.key}>
       <div className={classes.input}>
-        <div className={classes.label}>Name</div>
+      <div className={classes.label}>Name</div>
         <Input
           className={classes.nameInput}
           value={field.name}

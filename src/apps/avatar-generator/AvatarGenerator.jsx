@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Settings from './Settings/Settings';
 import { useDocumentTitle, useLocalStorage } from 'xooks';
-import Background from '../../components/Background/Background';
-import classes from './Settings/Settings.styles.less';
-import Preview from './Preview/Preview';
 import {
   Accessories,
   BustPose,
@@ -11,15 +7,19 @@ import {
   FacialHair,
   Hair,
   StandingPose,
-  SittingPose
-} from "react-peeps";
+  SittingPose,
+} from 'react-peeps';
+import Settings from './Settings/Settings';
+import Background from '../../components/Background/Background';
+import classes from './Settings/Settings.styles.less';
+import Preview from './Preview/Preview';
 
 //Object.keys(Accessories[Math.floor(Math.random() * Accessories.length)])
-const Body=[
+const Body = [
   ...Object.keys(BustPose),
   ...Object.keys(SittingPose),
-  ...Object.keys(StandingPose)
-]
+  ...Object.keys(StandingPose),
+];
 const INITIAL_VALUES = {
   type: 'accessories',
   accessory: Object.keys(Accessories).at(Math.floor(Math.random() * Object.keys(Accessories).length)),
@@ -27,10 +27,10 @@ const INITIAL_VALUES = {
   face: Object.keys(Face).at(Math.floor(Math.random() * Object.keys(Face).length)),
   hair: Object.keys(Hair).at(Math.floor(Math.random() * Object.keys(Hair).length)),
   facialHair: Object.keys(FacialHair).at(Math.floor(Math.random() * Object.keys(FacialHair).length)),
-  background:true,
-  backgroundColor:'#F3D34A',
-  forground:'#000000',
-  flip:false
+  background: true,
+  backgroundColor: '#F3D34A',
+  forground: '#000000',
+  flip: false,
 };
 
 export default function AvatarGenerator() {
@@ -49,41 +49,40 @@ export default function AvatarGenerator() {
   const [backgroundColor, setbackgroundColor] = useState(initialValues.backgroundColor);
   const [forground, setforground] = useState(initialValues.forground);
   const [flip, setflip] = useState(initialValues.flip);
-  
-  useEffect(() => {
-    ls.save({ type,accessory,body,face,hair,facialHair,background,backgroundColor,forground,flip});
-    return ls.cancel;
-  }, [type,accessory,body,face,hair,facialHair,background,backgroundColor,forground,flip]);
 
-  const handlers = (state,value)=>{
-    switch(state){
-        case 'accessories':
-           return setAccessory(value);
-        case 'body':
-            return setBody(value);
-        case 'face':
-           return setFace(value);      
-        case 'facialhair':
-            return setFacialHair(value);
-        case 'hair':
-            return setHair(value);          
-        default:
-            return    
+  useEffect(() => {
+    ls.save({ type, accessory, body, face, hair, facialHair, background, backgroundColor, forground, flip });
+    return ls.cancel;
+  }, [type, accessory, body, face, hair, facialHair, background, backgroundColor, forground, flip]);
+
+  const handlers = (state, value) => {
+    switch (state) {
+      case 'accessories':
+        return setAccessory(value);
+      case 'body':
+        return setBody(value);
+      case 'face':
+        return setFace(value);
+      case 'facialhair':
+        return setFacialHair(value);
+      case 'hair':
+        return setHair(value);
+      default:
     }
   };
-  const previewHandlers={
-    onBackgroundChange:setbackground,
-    onColorChange:setbackgroundColor,
-    onForgroundChange:setforground,
-    onFlipChange:setflip
-  }
-  const getRandomAvatar=()=>{
+  const previewHandlers = {
+    onBackgroundChange: setbackground,
+    onColorChange: setbackgroundColor,
+    onForgroundChange: setforground,
+    onFlipChange: setflip,
+  };
+  const getRandomAvatar = () => {
     setAccessory(Object.keys(Accessories).at(Math.floor(Math.random() * Object.keys(Accessories).length)));
     setBody(Body.at(Math.floor(Math.random() * Body.length)));
     setFace(Object.keys(Face).at(Math.floor(Math.random() * Object.keys(Face).length)));
     setHair(Object.keys(Hair).at(Math.floor(Math.random() * Object.keys(Hair).length)));
     setFacialHair(Object.keys(FacialHair).at(Math.floor(Math.random() * Object.keys(FacialHair).length)));
-  }
+  };
   return (
     <>
       <Background className={classes.controls}>
@@ -100,9 +99,9 @@ export default function AvatarGenerator() {
               previewHandlers={previewHandlers}
               forground={forground}
               flip={flip}
-              onFlipChange={()=>setflip(!flip)}
+              onFlipChange={() => setflip(!flip)}
               getRandomAvatar={getRandomAvatar}
-            ></Preview>
+            />
           </div>
           <div className={classes.column}>
             <Settings
@@ -113,10 +112,11 @@ export default function AvatarGenerator() {
               facialHair={facialHair}
               type={type}
               onTypeChange={setType}
-              handlers={handlers}></Settings>
+              handlers={handlers}
+            />
           </div>
         </div>
-        <p  style={{textAlign:"right"}}>Attribution: <a href="https://github.com/CeamKrier/react-peeps" target="_blank">CeamKrier</a></p>
+        <p style={{ textAlign: 'right' }}>Attribution: <a href="https://github.com/CeamKrier/react-peeps" target="_blank">CeamKrier</a></p>
       </Background>
     </>
   );
