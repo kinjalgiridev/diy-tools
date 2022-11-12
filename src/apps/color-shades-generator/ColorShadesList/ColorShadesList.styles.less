@@ -1,12 +1,18 @@
 .wrapper {
   padding: 15px;
   margin: 10px;
+  @media (max-width: 375px) {
+      margin-right: 0;
+    }
 }
 
 .header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  @media (max-width: 475px) {
+      display: block;
+    }
 }
 
 .copyAll,
@@ -27,6 +33,9 @@
 
 .copyAll {
   color: @oc-violet-7;
+    @media (max-width: 475px) {
+        padding-top: 10px;
+      }
 }
 
 .copyAllCopied {
