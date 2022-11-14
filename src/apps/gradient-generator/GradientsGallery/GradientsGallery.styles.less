@@ -14,9 +14,13 @@
   display: flex;
   flex-wrap: wrap;
   margin: 5px;
+  @media (max-width: 768px) {
+      justify-content: space-evenly;
+    }
 }
 
 .item {
   margin: 5px;
   flex: 0 0 calc(33.3333% - 10px);
+
 }

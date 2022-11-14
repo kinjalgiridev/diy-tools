@@ -1,6 +1,10 @@
 .controls {
   margin: 10px;
   padding: 15px;
+  @media (max-width: 425px) {
+    margin-right: 0;
+    padding: 0;
+  }
 }
 
 .preview {
@@ -11,53 +15,70 @@
   display: flex;
   margin-top: 30px;
   @media (max-width: 1080px) {
-      display: block;
-    }
+    display: block;
+  }
+  @media (max-width: 425px) {
+    padding-left: 10px;
+  }
 }
 .label {
   color: @oc-gray-6;
-  margin-right: 15px; 
+  margin-right: 15px;
+  @media (max-width: 425px) {
+    margin-right: 0;
+  }
 }
-.labelprev
-{
+.labelprev {
   color: @oc-gray-6;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 .label h4 {
-  cursor:pointer;
+  cursor: pointer;
   margin-left: 15px;
 }
 .label svg {
-  cursor:pointer;
+  cursor: pointer;
 }
 .active {
   color: @oc-violet-9;
   pointer-events: none;
 }
-.scroll
-{
+.scroll {
+  @media (max-width: 320px) {
+    padding: 0;
+  }
   height: 350px;
   overflow-y: auto;
   overflow-x: hidden;
   list-style: none;
-  padding:10px
+  padding: 10px;
 }
-.scroll li{
-  padding:10px 0px;
+.scroll li {
+  padding: 10px 0px;
   display: flex;
   align-items: center;
 }
-.pd15
-{
-  padding:15px
+.pd15 {
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
+  padding: 15px;
+}
+.custom_btn div{
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 320px;
+  @media (max-width: 320px) {
+    max-width: 200px;
+  }
 }
 .dark {
   .control {
     color: @oc-gray-3;
   }
-  .labelprev
-  {
+  .labelprev {
     color: @oc-gray-5;
   }
   .active {
@@ -66,11 +87,27 @@
 }
 
 .column {
+  @media (max-width: 1080px) {
+    display: inline-block;
+    padding: 10px;
+  }
+  @media (max-width: 425px) {
+    display: inline-block;
+    padding: 0px;
+  }
   & + & {
     margin-left: 30px;
     @media (max-width: 1080px) {
-        margin-left: 0;
-      }
+      margin-left: 0;
+    }
   }
-  
+}
+
+.TabCustom {
+  max-width: 320px;
+  flex-wrap: nowrap;
+
+  @media (max-width) {
+    max-width: 150px;
+  }
 }
