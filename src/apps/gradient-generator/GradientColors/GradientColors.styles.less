@@ -1,6 +1,9 @@
 .color {
   display: flex;
-
+  @media (max-width: 768px) {
+      flex-wrap: wrap;
+      align-items: center;
+    }
   & + & {
     margin-top: 15px;
   }
@@ -8,17 +11,28 @@
 
 .header {
   display: flex;
+  @media (max-width: 575px) {
+      flex-wrap: wrap;
+      // display: block;
+      padding-top: 15px;
+    }
 }
 
 .label {
   font-size: 14px;
   margin-bottom: 7px;
   color: @oc-gray-6;
+  @media (max-width: 375px) {
+      max-width: 90px;
+    }
 }
 
 .field {
   & + & {
     margin-left: 30px;
+    @media (max-width: 768px) {
+        margin-left: 10px;
+      }
   }
 }
 

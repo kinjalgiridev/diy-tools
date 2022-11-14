@@ -13,10 +13,12 @@ export default function GradientColors({ className, values, handlers }) {
   const items = values.map((value, index) => (
     <div className={classes.color} key={value.key}>
       <div className={classes.field}>
+        <div style={{ marginBottom: '18px' }}>
         <HexInput
           value={value.color}
           onChange={(color) => handlers.setItemProp(index, 'color', color)}
-        />
+          />
+          </div>
       </div>
       <div className={classes.field}>
         <SliderInput

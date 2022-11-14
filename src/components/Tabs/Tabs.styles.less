@@ -1,6 +1,10 @@
 .tabs {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  @media (max-width: 425px) {
+      max-width: 150px;
+    }
 }
 
 .control {
@@ -8,10 +12,10 @@
   background-color: #fff;
   border: 1px solid @oc-gray-3;
   color: @oc-gray-7;
-  font-size: 18px;
-  height: 36px;
-  padding-left: 15px;
-  padding-right: 15px;
+  font-size: 14px;
+    height: 28px;
+    padding-left: 5px;
+    padding-right: 5px;
   outline: 0;
   appearance: none;
   cursor: pointer;

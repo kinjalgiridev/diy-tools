@@ -14,6 +14,11 @@ import classes from './Settings.styles.less';
 
 const types = [
   { value: 'default', label: 'Raw data' },
+  { value: 'login', label: 'Login Credentials' },
+  { value: 'profile', label: 'Profile' },
+  { value: 'company', label: 'Company' },
+  { value: 'address', label: 'Address' },
+  { value: 'date', label: 'Date' },
   { value: 'json', label: 'JSON Schema' },
 ];
 
@@ -33,7 +38,7 @@ export default function Settings({
   const schema = fields.map((field, index) => (
     <div className={classes.field} key={field.key}>
       <div className={classes.input}>
-        <div className={classes.label}>Name</div>
+      <div className={classes.label}>Name</div>
         <Input
           className={classes.nameInput}
           value={field.name}
@@ -90,7 +95,7 @@ export default function Settings({
 }
 
 Settings.propTypes = {
-  type: PropTypes.oneOf(['default', 'json']).isRequired,
+  type: PropTypes.oneOf(['default', 'json','login']).isRequired,
   amount: PropTypes.number.isRequired,
 
   fields: PropTypes.arrayOf(

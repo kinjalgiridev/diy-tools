@@ -5,6 +5,9 @@
   border-radius: 5px;
   user-select: none;
   height: 10px;
+  @media (max-width:425px) {
+      max-width: 150px;
+    }
 }
 
 .active {
@@ -35,6 +38,9 @@
 
 .dark {
   background-color: @oc-gray-7;
+  @media (max-width: 375px) {
+      max-width: 90px;
+    }
 
   .active {
     background-color: @oc-blue-8 !important;

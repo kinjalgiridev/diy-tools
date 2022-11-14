@@ -1,4 +1,3 @@
-// THIS FILE IS AUTO GENERATED
 export default [
 "Fa500Px",
 "FaAccessibleIcon",
