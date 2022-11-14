@@ -100,7 +100,9 @@ export default function Settings({ handlers, type, onTypeChange, accessory, body
   return (
     <>
       <Background className={cx(classes.wrapper, classes[theme], classes.pd15)}>
-        <Tabs data={types} active={type} onTabChange={onTypeChange} />
+        <div className={classes.custom_btn}>
+          <Tabs data={types} active={type} onTabChange={onTypeChange} />
+        </div>
         <ul className={classes.scroll}>
           {
         data[type].map((element) => (

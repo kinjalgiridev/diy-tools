@@ -102,11 +102,13 @@ export default function Preview({
       <div className={classes.inner}>
         <div className={classes.body}>
           <div className={classes.column}>
-            <Tabs
-              data={backgroundData}
-              onTabChange={previewHandlers.onBackgroundChange}
-              active={background}
-            />
+            <div className={classes.TabCustom}>
+              <Tabs
+                data={backgroundData}
+                onTabChange={previewHandlers.onBackgroundChange}
+                active={background}
+              />
+            </div>
             {background && (
               <>
                 <div className={cx(classes[theme], classes.labelprev)}>Background Color</div>
@@ -115,7 +117,7 @@ export default function Preview({
             )}
           </div>
           <div className={classes.column}>
-            <div style={{ ...styles.showcaseWrapper, paddingTop: '15px'}}>
+            <div style={{ ...styles.showcaseWrapper, paddingTop: '15px' }}>
               <Button
                 style={{ height: '35px', marginRight: '20px', display: 'flex', alignItems: 'center' }}
                 onClick={getRandomAvatar}
@@ -136,7 +138,7 @@ export default function Preview({
         <div className={classes.body}>
           <div className={classes.column}>
             <Button
-              style={{ float: 'right', margin: '10px 0px 10px 10px' }}
+              style={{ margin: '10px 0px 10px 10px' }}
               onClick={downloadSvgFile}
             >
               Download SVG
@@ -144,7 +146,7 @@ export default function Preview({
           </div>
           <div className={classes.column}>
             <Button
-              style={{ float: 'right', margin: '10px 0px 10px 10px' }}
+              style={{ margin: '10px 0px 10px 10px' }}
               onClick={downloadPngFile}
             >
               Download PNG
