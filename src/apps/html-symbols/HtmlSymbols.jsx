@@ -45,7 +45,7 @@ export default function HtmlSymbols() {
 
   const handleCopy = (value) => {
     setCopiedValue(value);
-    clipboard.copy(value)
+    clipboard.copy(value);
   }
 
   const results = searchSymbols(query, type).map((item) => (

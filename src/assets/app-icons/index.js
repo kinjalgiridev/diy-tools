@@ -10,7 +10,8 @@ import fakeDataGenerator from './fake-data-generator.svg';
 import cssCursors from './css-cursors.svg';
 import eventsKeycode from './events-keycode.svg';
 import gradientGenerator from './gradient-generator.svg';
-
+import urlEncoding from './url-encoding.svg';
+import urlDecoding from './url-decoding.svg';
 export default {
   '/triangle-generator': triangleGenerator,
   '/color-shades-generator': colorShadesGenerator,
@@ -28,4 +29,6 @@ export default {
   '/gradient-generator': gradientGenerator,
   '/password-generator': fakeDataGenerator,
   '/avatar-generator': fakeDataGenerator,
+  '/url-encoding': urlEncoding,
+  '/url-decoding': urlDecoding,
 };

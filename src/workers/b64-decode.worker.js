@@ -4,8 +4,7 @@ import processSvgFile from '../utils/process-svg-file';
 onmessage = (event) => {
   const { file, content } = event.data;
   if (content) {
-    console.log(content.substring(0,4));
-    content.substring(0,4)==="data"?postMessage(content):postMessage(atob(content));  
+    content.substring(0, 4) === 'data' ? postMessage(content) : postMessage(atob(content));
   } else if (file) {
     if (file.type === 'image/svg+xml') {
       processSvgFile(file)
@@ -14,14 +13,13 @@ onmessage = (event) => {
           postMessage(`data:image/svg+xml;base64,${atob(code)}`);
         })
         .catch((error) => postMessage(error));
+    }
+    try {
+      const reader = new FileReader();
+      reader.addEventListener('loadend', () => postMessage(reader.result));
+      reader.readAsDataURL(file);
+    } catch (error) {
+      postMessage(error);
+    }
   }
-  try {
-    const reader = new FileReader();
-    reader.addEventListener('loadend', () => postMessage(reader.result));
-    reader.readAsDataURL(file);
-  } catch (error) {
-    postMessage(error);
-  }
-  }
- 
 };

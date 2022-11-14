@@ -5,8 +5,6 @@ import PageBase from '../../components/PageBase/PageBase';
 import settings from '../../settings';
 import classes from './Index.styles.less';
 
-  
-
 export default function Index() {
   useDocumentTitle('DIY Tools');
 

@@ -81,10 +81,9 @@ module.exports = {
     {
       link: '/password-generator',
       name: 'Password generator',
-      description:
-        'Generate wide variety of passwords',
+      description: 'Generate wide variety of passwords',
     },
-    
+
     {
       link: '/html-symbols',
       name: 'Symbols collection',
@@ -95,8 +94,7 @@ module.exports = {
     {
       link: '/icon-collection',
       name: 'Icon collection',
-      description:
-        'Collection of commonly used icons',
+      description: 'Collection of commonly used icons',
     },
 
     {
@@ -112,9 +110,9 @@ module.exports = {
     },
 
     {
-      link: '/events-keycode',
-      name: 'Keyboard events codes',
-      description: 'JavaScript events keycode values',
+      link: '/url-encoding',
+      name: 'encode url ',
+      description: 'add a link to convert url encode',
     },
   ],
 };
